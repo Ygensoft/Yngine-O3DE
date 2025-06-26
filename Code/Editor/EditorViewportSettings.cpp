@@ -517,7 +517,7 @@ namespace SandboxEditor
     AzFramework::InputChannelId CameraTranslateForwardChannelId()
     {
         return AzFramework::InputChannelId(
-            AzToolsFramework::GetRegistry(CameraTranslateForwardIdSetting, AZStd::string("keyboard_key_alphanumeric_W")).c_str());
+            AzToolsFramework::GetRegistry(CameraTranslateForwardIdSetting, AZStd::string("keyboard_key_alphanumeric_Z")).c_str());
     }
 
     void SetCameraTranslateForwardChannelId(AZStd::string_view cameraTranslateForwardId)
@@ -539,7 +539,7 @@ namespace SandboxEditor
     AzFramework::InputChannelId CameraTranslateLeftChannelId()
     {
         return AzFramework::InputChannelId(
-            AzToolsFramework::GetRegistry(CameraTranslateLeftIdSetting, AZStd::string("keyboard_key_alphanumeric_A")).c_str());
+            AzToolsFramework::GetRegistry(CameraTranslateLeftIdSetting, AZStd::string("keyboard_key_alphanumeric_Q")).c_str());
     }
 
     void SetCameraTranslateLeftChannelId(AZStd::string_view cameraTranslateLeftId)
@@ -572,7 +572,7 @@ namespace SandboxEditor
     AzFramework::InputChannelId CameraTranslateDownChannelId()
     {
         return AzFramework::InputChannelId(
-            AzToolsFramework::GetRegistry(CameraTranslateDownIdSetting, AZStd::string("keyboard_key_alphanumeric_Q")).c_str());
+            AzToolsFramework::GetRegistry(CameraTranslateDownIdSetting, AZStd::string("keyboard_key_alphanumeric_A")).c_str());
     }
 
     void SetCameraTranslateDownChannelId(AZStd::string_view cameraTranslateDownId)
@@ -660,7 +660,7 @@ namespace SandboxEditor
     AzFramework::InputChannelId CameraFocusChannelId()
     {
         return AzFramework::InputChannelId(
-            AzToolsFramework::GetRegistry(CameraFocusIdSetting, AZStd::string("keyboard_key_alphanumeric_X")).c_str());
+            AzToolsFramework::GetRegistry(CameraFocusIdSetting, AZStd::string("keyboard_key_alphanumeric_F")).c_str());
     }
 
     void SetCameraFocusChannelId(AZStd::string_view cameraFocusId)

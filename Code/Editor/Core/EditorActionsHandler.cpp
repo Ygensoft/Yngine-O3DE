@@ -1240,7 +1240,7 @@ void EditorActionsHandler::OnActionRegistrationHook()
         m_actionManagerInterface->InstallEnabledStateCallback(actionIdentifier, AreEntitiesSelected);
         m_actionManagerInterface->AddActionToUpdater(EditorIdentifiers::EntitySelectionChangedUpdaterIdentifier, actionIdentifier);
 
-        m_hotKeyManagerInterface->SetActionHotKey(actionIdentifier, "Z");
+        m_hotKeyManagerInterface->SetActionHotKey(actionIdentifier, "X");
     }
 
     // View Bookmarks
