@@ -1,0 +1,18 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                "ScanFolder MyFirstGem/Assets": {
+                    "watch": "@GEMROOT:MyFirstGem@/Assets",
+                    "recursive": 1,
+                    "order": 101
+                },
+                "ScanFolder MyFirstGem/Registry": {
+                    "watch": "@GEMROOT:MyFirstGem@/Registry",
+                    "recursive": 1,
+                    "order": 102
+                }
+            }
+        }
+    }
+}
