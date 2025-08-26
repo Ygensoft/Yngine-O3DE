@@ -1166,15 +1166,18 @@ namespace DebugDraw
 
         m_spheresRayTracingIndicesBuffer->UpdateData(&element.m_radius, sizeof(float), element.m_localInstanceIndex * sizeof(float));
 
+        auto meshInfoHandle = m_rayTracingFeatureProcessor->CreateMeshInfoForProceduralGeometry();
+
         AZ::Render::FallbackPBR::MaterialParameters material;
         material.m_baseColor = element.m_color;
         material.m_roughnessFactor = 0.9f;
+        m_rayTracingFeatureProcessor->SetMaterialParametersForProceduralGeometry(meshInfoHandle, material);
 
         m_rayTracingFeatureProcessor->AddProceduralGeometry(
             m_sphereRayTracingTypeHandle.GetWeakHandle(),
             UuidFromEntityId(element.m_targetEntityId),
             AZ::Aabb::CreateCenterRadius(AZ::Vector3::CreateZero(), 1.f),
-            material,
+            meshInfoHandle,
             AZ::RHI::RayTracingAccelerationStructureInstanceInclusionMask::STATIC_MESH,
             element.m_localInstanceIndex);
     }
@@ -1198,15 +1201,18 @@ namespace DebugDraw
                 m_rayTracingFeatureProcessor->RegisterProceduralGeometryType("DebugDraw::Obb", rayTracingShader, "ObbIntersection");
         }
 
+        auto meshInfoHandle = m_rayTracingFeatureProcessor->CreateMeshInfoForProceduralGeometry();
+
         AZ::Render::FallbackPBR::MaterialParameters material;
         material.m_baseColor = element.m_color;
         material.m_roughnessFactor = 0.9f;
+        m_rayTracingFeatureProcessor->SetMaterialParametersForProceduralGeometry(meshInfoHandle, material);
 
         m_rayTracingFeatureProcessor->AddProceduralGeometry(
             m_obbRayTracingTypeHandle.GetWeakHandle(),
             UuidFromEntityId(element.m_targetEntityId),
             AZ::Aabb::CreateCenterRadius(AZ::Vector3::CreateZero(), 1.f),
-            material,
+            meshInfoHandle,
             AZ::RHI::RayTracingAccelerationStructureInstanceInclusionMask::STATIC_MESH,
             0);
     }
