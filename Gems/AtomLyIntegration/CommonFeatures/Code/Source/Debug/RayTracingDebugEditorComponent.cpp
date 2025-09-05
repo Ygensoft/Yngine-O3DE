@@ -54,6 +54,7 @@ namespace AZ::Render
                         ->EnumAttribute(RayTracingDebugViewMode::Barycentrics, "Barycentric Coordinates")
                         ->EnumAttribute(RayTracingDebugViewMode::Normals, "Normals")
                         ->EnumAttribute(RayTracingDebugViewMode::UVs, "UV Coordinates")
+                        ->EnumAttribute(RayTracingDebugViewMode::BaseColor, "Material Base Color")
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, Edit::PropertyRefreshLevels::ValuesOnly)
                         ->Attribute(Edit::Attributes::Visibility, &RayTracingDebugComponentConfig::GetEnabled)
                 ;
