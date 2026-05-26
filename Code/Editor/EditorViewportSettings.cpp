@@ -517,7 +517,7 @@ namespace SandboxEditor
     AzFramework::InputChannelId CameraTranslateForwardChannelId()
     {
         return AzFramework::InputChannelId(
-            AzToolsFramework::GetRegistry(CameraTranslateForwardIdSetting, AZStd::string("keyboard_key_alphanumeric_W")).c_str());
+            AzToolsFramework::GetRegistry(CameraTranslateForwardIdSetting, AZStd::string("keyboard_key_alphanumeric_Z")).c_str());
     }
 
     void SetCameraTranslateForwardChannelId(AZStd::string_view cameraTranslateForwardId)
@@ -539,7 +539,7 @@ namespace SandboxEditor
     AzFramework::InputChannelId CameraTranslateLeftChannelId()
     {
         return AzFramework::InputChannelId(
-            AzToolsFramework::GetRegistry(CameraTranslateLeftIdSetting, AZStd::string("keyboard_key_alphanumeric_A")).c_str());
+            AzToolsFramework::GetRegistry(CameraTranslateLeftIdSetting, AZStd::string("keyboard_key_alphanumeric_Q")).c_str());
     }
 
     void SetCameraTranslateLeftChannelId(AZStd::string_view cameraTranslateLeftId)
@@ -572,7 +572,7 @@ namespace SandboxEditor
     AzFramework::InputChannelId CameraTranslateDownChannelId()
     {
         return AzFramework::InputChannelId(
-            AzToolsFramework::GetRegistry(CameraTranslateDownIdSetting, AZStd::string("keyboard_key_alphanumeric_Q")).c_str());
+            AzToolsFramework::GetRegistry(CameraTranslateDownIdSetting, AZStd::string("keyboard_key_alphanumeric_A")).c_str());
     }
 
     void SetCameraTranslateDownChannelId(AZStd::string_view cameraTranslateDownId)
@@ -660,7 +660,7 @@ namespace SandboxEditor
     AzFramework::InputChannelId CameraFocusChannelId()
     {
         return AzFramework::InputChannelId(
-            AzToolsFramework::GetRegistry(CameraFocusIdSetting, AZStd::string("keyboard_key_alphanumeric_X")).c_str());
+            AzToolsFramework::GetRegistry(CameraFocusIdSetting, AZStd::string("keyboard_key_alphanumeric_F")).c_str());
     }
 
     void SetCameraFocusChannelId(AZStd::string_view cameraFocusId)
@@ -670,7 +670,7 @@ namespace SandboxEditor
 
     float CameraDefaultNearPlaneDistance()
     {
-        return aznumeric_caster(AzToolsFramework::GetRegistry(CameraNearPlaneDistanceSetting, 0.2));
+        return aznumeric_caster(AzToolsFramework::GetRegistry(CameraNearPlaneDistanceSetting, 0.1));
     }
 
     void SetCameraDefaultNearPlaneDistance(const float distance)
@@ -680,7 +680,7 @@ namespace SandboxEditor
 
     float CameraDefaultFarPlaneDistance()
     {
-        return aznumeric_caster(AzToolsFramework::GetRegistry(CameraFarPlaneDistanceSetting, 1024.0));
+        return aznumeric_caster(AzToolsFramework::GetRegistry(CameraFarPlaneDistanceSetting, 100.0));
     }
 
     void SetCameraDefaultFarPlaneDistance(const float distance)
@@ -700,7 +700,7 @@ namespace SandboxEditor
 
     float CameraDefaultFovDegrees()
     {
-        return aznumeric_caster(AzToolsFramework::GetRegistry(CameraFovDegreesSetting, aznumeric_cast<double>(75.0)));
+        return aznumeric_caster(AzToolsFramework::GetRegistry(CameraFovDegreesSetting, aznumeric_cast<double>(60.0)));
     }
 
     void SetCameraDefaultFovDegrees(const float fovDegrees)
